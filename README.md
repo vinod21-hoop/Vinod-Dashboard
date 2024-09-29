@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# My Dashboard App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a dashboard application built with React and React Bootstrap. The dashboard allows users to add, remove, and search for widgets in specific categories, with each widget displaying a pie chart based on user input.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Dynamically add and remove widgets from categories.
+- Widgets are created from user input with a custom name and pie chart values.
+- Each widget is displayed with a pie chart showing data provided by the user.
+- Widgets can be searched using a search bar.
+- Responsive UI using React Bootstrap components.
+- Widgets are organized under multiple categories.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- *React* (version 18)
+- *React Bootstrap* for UI components and styling.
+- *Chart.js* for displaying pie charts.
+- *Bootstrap* for layout and styling.
+- *JSON* to store categories and widgets data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+- *components/*
+  - Dashboard.js: The main dashboard layout, showing categories and widgets, and including a sidebar for adding widgets.
+  - AddWidgetSidebar.js: Sidebar component used to add a new widget to the dashboard.
+  - Widget.js: Represents a single widget card that contains a pie chart and a remove button.
+  - WidgetList.js: Displays a list of widgets.
+  - PieChart.js: Renders a pie chart for each widget using Chart.js.
+- *data/*
+  - categories.json: Stores the initial categories and their corresponding widgets.
+- *index.js*: Entry point of the React application.
+- *index.css*: Custom styles for the dashboard background and widgets layout.
+- *Dashboard.css*: Contains specific styles for the Dashboard components.
+  
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repository:
 
-### `npm run build`
+    sh
+    git clone <repository-url>
+    
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    sh
+    cd my-dashboard-app
+    
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install dependencies:
 
-### `npm run eject`
+    sh
+    npm install
+    
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    sh
+    npm start
+    
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    The app should now be running on [http://localhost:3000](http://localhost:3000).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+- *Add Widgets*: Click the '+ Add Widget' button, fill in the details, and click 'Add Widget'.
+- *Remove Widgets*: Click the 'X' button on the widget card to remove it.
+- *Search Widgets*: Use the search bar to find a widget by name.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Adding a Widget
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To add a widget:
+1. Click the "+ Add Widget" button at the top right of the dashboard.
+2. Select a category from the dropdown.
+3. Enter the widget name and provide labels and values for the pie chart.
+4. Click the "Add Widget" button to add the widget to the selected category.
 
-### Code Splitting
+## File Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- *Dashboard.js*: This component renders the main layout of the dashboard, with the Navbar, search functionality, categories, and widgets.
+- *AddWidgetSidebar.js*: A sidebar that opens from the right for adding new widgets. It includes input fields for widget names, labels, and values.
+- *PieChart.js*: Displays a pie chart for each widget using Chart.js.
+- *Widget.js*: Each widget contains a pie chart, widget name, and a remove button.
+- *WidgetList.js*: Renders a list of widgets for each category.
 
-### Analyzing the Bundle Size
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- *Widget Chart Colors*: The pie chart colors are defined in PieChart.js. You can modify them in the backgroundColor array in the chart data.
+- *Dashboard Background*: The background color of the dashboard can be changed in index.css under the body selector.

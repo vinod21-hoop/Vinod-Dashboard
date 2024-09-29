@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Sales Performance",
+      "widgets": [
+        {
+          "id": 1,
+          "name": "Revenue Breakdown",
+          "labels": ["Product Sales", "Service Sales"],
+          "values": [55, 45]
+        },
+        {
+          "id": 2,
+          "name": "Sales Target Achievement",
+          "labels": ["Q3 Target","Q4 Target"],
+          "values": [85,15]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Project Management",
+      "widgets": [
+        {
+          "id": 3,
+          "name": "Task Completion Status",
+          "labels": ["Completed", "In Progress", "Pending"],
+          "values": [50, 30, 20]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Customer Support",
+      "widgets": [
+        {
+          "id": 4,
+          "name": "Ticket Resolution Time",
+          "labels": ["Average Response Time","Median Response Time"],
+          "values": [35,65]
+        },
+        {
+          "id": 5,
+          "name": "Customer Satisfaction Ratings",
+          "labels": ["Positive Feedback", "Negative Feedback"],
+          "values": [70, 30]
+        }
+      ]
+    }
+  ]
+}
